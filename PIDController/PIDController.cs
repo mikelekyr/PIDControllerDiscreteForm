@@ -55,7 +55,7 @@
             // Integral
             integrator += 0.5f * Ki * T * (error + prevError);
 
-            /* Anti-wind-up via integrator clamping */
+            // Anti-wind-up via integrator clamping 
             integrator = integrator > limMaxInt ? limMaxInt : integrator < limMinInt ? limMinInt : integrator;
 
             // Derivative (band-limited differentiator)
